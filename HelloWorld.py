@@ -5,7 +5,7 @@ from flask import Flask
 from flask_ask import Ask, request, session, question, statement
 
 
-app = Flask(__name__)
+app = flask.Flask(__name__)
 ask = Ask(app, "/")
 logging.getLogger('flask_ask').setLevel(logging.DEBUG)
 
