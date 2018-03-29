@@ -8,6 +8,7 @@ from flask_ask import Ask, request, session, question, statement
 app = Flask(__name__)
 @app.route("/new", methods = ['POST'])
 def new():
+    print('Working')
     ask = Ask(app, "/")
     logging.getLogger('flask_ask').setLevel(logging.DEBUG)
 
