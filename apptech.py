@@ -6,7 +6,7 @@ related to Doctor Appt application
 '''
 import json
 from flask import Flask,request, jsonify
-from HelloWorld import pad
+from helloworld import pad
 
 app = Flask(__name__)
 
