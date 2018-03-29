@@ -6,13 +6,12 @@ from flask_ask import Ask, request, session, question, statement
 
 
 app = Flask(__name__)
-@app.route("/new", methods = ['GET'])
+ask = Ask(app, "/")
+logging.getLogger('flask_ask').setLevel(logging.DEBUG)
+
+@app.route("/new", methods = ['POST'])
 def new():
     print('Working')
-    ask = Ask(app, "/")
-    logging.getLogger('flask_ask').setLevel(logging.DEBUG)
-
-
     @ask.launch
     def launch():
         speech_text = 'Welcome to Infocuit Solutions, you can say hello'
